@@ -3,23 +3,20 @@
 
 def consecutive_sum(nums):
 
-	possible_combos = {}
-
 	for i in range(0, len(nums)):
 		
 		if nums[i] <= target:
-			possible_combos[nums[i]] = target - nums[i]
 
 			if i > 0:
-				if nums[i - 1] == possible_combos[nums[i]]:
+				if nums[i - 1] == target - nums[i]:
 					return True
 			if i < len(nums) - 1:
-				if nums[i + 1] == possible_combos[nums[i]]:
+				if nums[i + 1] == target - nums[i]:
 					return True
 	return False
 	
 	print(possible_combos)
 	
-nums = [6, 1, 6, 7]
-target = 12
+nums = [5, 6, 4, 12]
+target = 10
 print(consecutive_sum(nums))
