@@ -3,20 +3,6 @@
 
 def evens_odds(nums):
 
-	left_pointer = 0
-	right_pointer = 1
-
-	while right_pointer < len(nums):
-		
-		if nums[left_pointer] % 2 != 0 and nums[right_pointer] % 2 == 0:
-			temp = nums[left_pointer]
-			nums[left_pointer] = nums[right_pointer]
-			nums[right_pointer] = temp
-			left_pointer += 1
-			right_pointer += 1
-		else:
-			right_pointer += 1
-
 	#Put the even elements first and the odd elements after, without sorting
 
 	for i in range(0, len(nums)):
