@@ -15,8 +15,6 @@ def consecutive_sum(nums):
 					return True
 	return False
 	
-	print(possible_combos)
-	
 nums = [5, 6, 4, 12]
-target = 10
+target = 18
 print(consecutive_sum(nums))
