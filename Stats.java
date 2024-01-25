@@ -12,10 +12,10 @@ class Stats {
 
     public void possibleDieCombinations(char[] possibleDieValues, String current) {
 	if (current.length() == 4) {
-	    System.out.println("Die rolled: " + current);
+	    //System.out.println("Die rolled: " + current);
 	    possibilities++;
-	    System.out.println("Die counted: " + dropLowest(current));
-	    System.out.println("Sum of die counted: " + addDie(dropLowest(current)));
+	    //System.out.println("Die counted: " + dropLowest(current));
+	    //System.out.println("Sum of die counted: " + addDie(dropLowest(current)));
 	    countSums(addDie(dropLowest(current)));
 	} else {
 	    for (int i = 0; i < 6; i++) {
@@ -29,7 +29,7 @@ class Stats {
 
     public int[] countSums(int sum) {
 	sumWays[sum - 3] = sumWays[sum - 3] + 1;
-	System.out.println("Sum: " + sum + "# of times: " + sumWays[sum - 3]);
+	//System.out.println("Sum: " + sum + "# of times: " + sumWays[sum - 3]);
 	return sumWays; 
     }
 
@@ -60,8 +60,9 @@ class Stats {
         Stats stats1 = new Stats();
         char[] possibleDieValues = {'1', '2', '3', '4', '5', '6'};
         stats1.possibleDieCombinations(possibleDieValues, "");
-	System.out.println(stats1.possibilities);
+	//System.out.println(stats1.possibilities);
 	double probability;
+	System.out.println();
 	for (int i = 0; i < 16; i++) {
             System.out.println("A stat of: " + (i + 3) + " can result from " + stats1.sumWays[i] + " different combinations of the four dice.");
 	    probability = (double) (stats1.sumWays[i])/(stats1.possibilities) * 100;
