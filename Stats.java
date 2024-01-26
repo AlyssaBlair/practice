@@ -64,7 +64,7 @@ class Stats {
 	double probability;
 	System.out.println();
 	for (int i = 0; i < 16; i++) {
-            System.out.println("A stat of: " + (i + 3) + " can result from " + stats1.sumWays[i] + " different combinations of the four dice.");
+            System.out.println("A stat of: " + (i + 3) + " can result from " + stats1.sumWays[i] + " different permutations of the four dice.");
 	    probability = (double) (stats1.sumWays[i])/(stats1.possibilities) * 100;
 	    System.out.println("This results in a " + (probability) + "% chance of rolling a stat of " + (i + 3) + ".");
 	System.out.println();
