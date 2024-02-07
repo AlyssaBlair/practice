@@ -1,5 +1,6 @@
 
-#Write a function to print the first letter of every word in a string.
+# Write a function to print the first letter of every word in a 
+# sequence of words.
 
 def print_first_letters(s):
 
