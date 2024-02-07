@@ -1,5 +1,6 @@
 
-#Given two strings with the same characters except for one additional character in one string, return that additional character.
+# Given two strings with the same characters except for exactly one 
+# additional character in one string, return that additional character.
 
 def extra_character(s, t):
 
