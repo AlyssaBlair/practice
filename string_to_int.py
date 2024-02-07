@@ -1,5 +1,13 @@
 
-#Convert a string to an int without using any built in conversion functions. Assume input is a valid number with no letters. I have included the case for a negative number by taking the negative sign away, then converting to an int, then at the end multiplying by -1 if the original string had a "-" as the first element. This will also account for other non alpanum characters and return an integer that removes those elements, but this will not account for letters being in the original string
+# Convert a string to an int without using any built 
+# in conversion functions. Assume input is a valid number 
+# with no letters. I have included the case for a negative 
+# number by taking the negative sign away, then converting 
+# to an int, then at the end multiplying by -1 if the 
+# original string had a "-" as the first element. This will 
+# also account for other non alpanum characters and return 
+# an integer that removes those elements, but this will not 
+# account for letters being in the original string
 
 def string_to_int(s):
 
