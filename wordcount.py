@@ -1,5 +1,6 @@
 
-#This code checks to see how many times a given word appears in a block of text. This code disregards case
+# This code checks to see how many times a given word appears in a block 
+# of text. This code disregards upper vs. lower case.
 
 def wordcount(s, t):
 
