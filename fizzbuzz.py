@@ -1,5 +1,5 @@
 
-#This prints the game FizzBuzz for numbers 1 through n
+# This prints the game FizzBuzz for numbers 1 through n
 
 def fizzbuzz(n):
 
