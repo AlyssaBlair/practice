@@ -1,5 +1,5 @@
 
-#Create a basic rock, paper, scissors program
+# Create a basic rock, paper, scissors program
 
 def rock_paper_scissors(user_choice):
 
@@ -15,6 +15,9 @@ def rock_paper_scissors(user_choice):
 	computer_choice = random.randint(0, 2)
 	choices = ["rock", "paper", "scissors"]
 	computer_choice = choices[computer_choice]
+
+	if user_choice not in wins_map:
+		return "Input must be 'rock', 'paper', or 'scissors'. Please try again!"
 
 	print("Computer choice is:", computer_choice)
 
