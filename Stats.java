@@ -6,8 +6,11 @@
 //rolled a 3, 2, 6, and 4, you’d drop the 2 and add up the 3, 6, and 4 to get 13. But obviously 
 //there are a lot of different ways to get 13, so it's fun! I wouldn't be surprised if there
 //is a way simpler way to do this, but I wanted to be able to print out all the different
-//permutations of the dice if I wanted to see them so maybe that makes mine more complicated 
+//permutations of the dice if I wanted to see them, so maybe that makes mine more complicated 
 //than it needs to be? lol... Regardless, here it is!
+
+//PS I'm really wishing I commented more in the actual code when I wrote this considering years
+//have passed now and I'm looking at it today like ???... I'll consider it a lesson learned haha
 
 import java.util.Arrays;
 
