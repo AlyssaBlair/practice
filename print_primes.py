@@ -1,4 +1,4 @@
-#Print all prime numbers up to the number x
+# Print all prime numbers up to the number x
 
 def print_primes(x):
 
