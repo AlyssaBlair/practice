@@ -1,3 +1,14 @@
+
+//I did this one because I play Dungeons and Dragons and was curious about this. This program
+//calculates the probability of rolling each possible stat value in Dungeons and Dragons 
+//character set up. It’s slightly complicated because you roll four six-sided dice and then 
+//drop the lowest of the four, and then add up the three remaining dice. So for example, if you
+//rolled a 3, 2, 6, and 4, you’d drop the 2 and add up the 3, 6, and 4 to get 13. But obviously 
+//there are a lot of different ways to get 13, so it's fun! I wouldn't be surprised if there
+//is a way simpler way to do this, but I wanted to be able to print out all the different
+//permutations of the dice if I wanted to see them so maybe that makes mine more complicated 
+//than it needs to be? lol... Regardless, here it is!
+
 import java.util.Arrays;
 
 class Stats {
@@ -10,18 +21,15 @@ class Stats {
 	sumWays = new int[16];
     }
 
-    public void possibleDieCombinations(char[] possibleDieValues, String current) {
+    public void possibleDiePermutations(char[] possibleDieValues, String current) {
 	if (current.length() == 4) {
-	    //System.out.println("Die rolled: " + current);
 	    possibilities++;
-	    //System.out.println("Die counted: " + dropLowest(current));
-	    //System.out.println("Sum of die counted: " + addDie(dropLowest(current)));
 	    countSums(addDie(dropLowest(current)));
 	} else {
 	    for (int i = 0; i < 6; i++) {
 		String previous = current;
 		current += possibleDieValues[i];
-		possibleDieCombinations(possibleDieValues, current);
+		possibleDiePermutations(possibleDieValues, current);
 		current = previous;
 	    }
 	}
@@ -29,7 +37,6 @@ class Stats {
 
     public int[] countSums(int sum) {
 	sumWays[sum - 3] = sumWays[sum - 3] + 1;
-	//System.out.println("Sum: " + sum + "# of times: " + sumWays[sum - 3]);
 	return sumWays; 
     }
 
@@ -52,15 +59,13 @@ class Stats {
 		indexOfDropped = i;
 	    }
         }
-	//System.out.println("Die value dropped: " + droppedValue);
 	return dieOutcome.substring(0, indexOfDropped) + dieOutcome.substring(indexOfDropped + 1);
     }
 
     public static void main(String args[]) {
         Stats stats1 = new Stats();
         char[] possibleDieValues = {'1', '2', '3', '4', '5', '6'};
-        stats1.possibleDieCombinations(possibleDieValues, "");
-	//System.out.println(stats1.possibilities);
+        stats1.possibleDiePermutations(possibleDieValues, "");
 	double probability;
 	System.out.println();
 	for (int i = 0; i < 16; i++) {
