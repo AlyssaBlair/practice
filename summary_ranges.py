@@ -1,5 +1,6 @@
 
-#Return the ranges of numbers covered consecutively by the input array. Example: Input: nums = [0,1,2,4,5,7], Output: ["0->2","4->5","7"]
+# Return the ranges of numbers covered consecutively by the input array. 
+# Example: Input: nums = [0,1,2,4,5,7], Output: ["0->2","4->5","7"]
 
 def summary_ranges(nums):
 
@@ -22,5 +23,5 @@ def summary_ranges(nums):
 		else:
 			print(final_array[i][0], "->", final_array[i][len(final_array[i]) - 1])
 
-nums = [0, 3, 4, 5, 6, 8, 9]
+nums = [0, 3, 4, 5, 6, 8, 9, 11]
 summary_ranges(nums)
