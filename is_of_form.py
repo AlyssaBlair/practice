@@ -1,5 +1,5 @@
 
-#Check to see if a number is in the form (2^n) - 1
+# Check to see if a number is in the form (2^n) - 1
 
 def is_of_form(x):
 
