@@ -1,5 +1,8 @@
 
-#Write a function to find the maximum sum of any contiguous sub array of an array of integers
+# Write a function to find the maximum sum of any contiguous sub array 
+# of an array of integers. For example, if the array is [0, 1, 3, 4, 5, 6, 8, 9],
+# the contiguous sub arrays are [0,1], [3, 4, 5, 6], and [8,9]. The sums of those
+# sub arrays are 1, 18, and 17 respectively. So, the function would return 18.
 
 def max_contiguous_sum(nums):
 
@@ -17,8 +20,6 @@ def max_contiguous_sum(nums):
 
 	sets_array.append(contiguous_numbers)
 
-	print(sets_array)
-
 	for i in range(0, len(sets_array)):
 		
 		sum = 0
@@ -29,8 +30,6 @@ def max_contiguous_sum(nums):
 		sums_array.append(sum)
 
 	highest_sum = sums_array[0]
-
-	print(sums_array)
 	
 	for i in range(1, len(sums_array)):
 		if sums_array[i] > sums_array[i - 1]:
