@@ -1,8 +1,11 @@
 
+# Check to see if a number is a palindrome. For
+# example, 4678764 is a palindrome number.
+# 467876 is not.
+
 def is_palindrome_number(x):
 
 	x_string = str(x)
-	print(x_string)
 	left = 0
 	right = len(x_string) - 1
 	
@@ -14,5 +17,5 @@ def is_palindrome_number(x):
 			right -= 1
 	return True	
 
-x = 478987
+x = 4789874
 print(is_palindrome_number(x))
