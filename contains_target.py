@@ -1,7 +1,10 @@
 
+# Use binary search to check if a given array of integers 
+# contains a target integer.
+
 def contains_target(nums, target):
 
-	#First we'll sort the array in ascending order
+	# First we'll sort the array in ascending order
 
 	for i in range(0, len(nums)):
 	
@@ -12,7 +15,7 @@ def contains_target(nums, target):
 				nums[i] = nums[j]
 				nums[j] = temp
 
-	#Now we'll use binary search to find the target
+	# Now we'll use binary search to find the target
 
 	left = 0
 	right = len(nums) - 1
@@ -33,5 +36,5 @@ def contains_target(nums, target):
 	return False
 	
 nums = [0, 6, 7, 3, 6]
-target = 0
+target = 20
 print(contains_target(nums, target))
