@@ -1,4 +1,7 @@
 
+# Write a program that returns the length of the last word
+# of a sequence of words.
+
 def length_of_last_word (s):
 
 	splitString = s.split()
